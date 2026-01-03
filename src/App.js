@@ -447,12 +447,12 @@ const Portfolio = () => {
 
       {/* Contact Section */}
       <section id="contact" style={styles.contactSection}>
-        <div style={styles.container}>
+        <div style={{...styles.container,padding:'30px'}}>
           <h2 style={styles.sectionTitle} className="fade-in-up">Get In Touch</h2>
           <p style={styles.contactSubtitle} className="fade-in-up">
             I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.
           </p>
-          <div style={styles.contactContent}>
+          <div style={styles.contactCard} className="fade-in-up">
             <div style={styles.contactInfo} className="slide-in-left">
               <div style={styles.contactItem}>
                 <div style={styles.contactIcon}>📧</div>
@@ -920,19 +920,6 @@ const styles = {
       fontWeight: 'bold',
     },
   },
-  contactSection: {
-    padding: '100px 30px',
-    background: 'linear-gradient(135deg, #1a1a3e 0%, #0f0f23 100%)',
-    color: 'white',
-  },
-  contactSubtitle: {
-    fontSize: '18px',
-    textAlign: 'center',
-    marginBottom: '60px',
-    opacity: '0.9',
-    maxWidth: '600px',
-    margin: '0 auto 60px',
-  },
   contactContent: {
     maxWidth: '1000px',
     margin: '0 auto',
@@ -941,48 +928,93 @@ const styles = {
     justifyContent: 'space-between',
     flexWrap: 'wrap',
   },
-  contactInfo: {
-    flex: '1',
-    minWidth: '300px',
-  },
-  contactItem: {
-    display: 'flex',
-    alignItems: 'flex-start',
-    gap: '20px',
-    marginBottom: '30px',
-  },
-  contactIcon: {
-    fontSize: '32px',
-  },
-  contactLabel: {
-    fontSize: '14px',
-    opacity: '0.8',
-    marginBottom: '5px',
-  },
-  contactValue: {
-    fontSize: '18px',
-    fontWeight: '500',
-    color: 'white',
-    textDecoration: 'none',
-  },
-  socialLinks: {
-    flex: '1',
-    minWidth: '300px',
-  },
-  socialTitle: {
-    fontSize: '24px',
-    fontWeight: '600',
-    marginBottom: '30px',
-  },
-  socialIcons: {
-    display: 'flex',
-    gap: '20px',
-  },
-  socialIcon: {
-    display: 'inline-block',
-    transition: 'all 0.3s ease',
-    cursor: 'pointer',
-  },
+  
+  contactSection: {
+  padding: '100px 30px',
+  background: 'linear-gradient(135deg, #1a1a3e 0%, #0f0f23 100%)',
+  color: 'white',
+},
+
+contactSubtitle: {
+  fontSize: '18px',
+  textAlign: 'center',
+  opacity: '0.9',
+  maxWidth: '600px',
+  margin: '0 auto 60px',
+},
+
+/* Main glass card */
+contactCard: {
+  maxWidth: '1000px',
+  margin: '0 auto',
+  padding: '50px',
+  display: 'flex',
+  gap: '60px',
+  justifyContent: 'space-between',
+  flexWrap: 'wrap',
+  background: 'rgba(30, 30, 63, 0.6)',
+  borderRadius: '24px',
+  border: '1px solid rgba(102, 126, 234, 0.25)',
+  boxShadow: '0 20px 50px rgba(0,0,0,0.4)',
+  backdropFilter: 'blur(8px)',
+},
+
+/* Left side info */
+contactInfo: {
+  flex: '1',
+  minWidth: '260px',
+},
+
+contactItem: {
+  display: 'flex',
+  alignItems: 'flex-start',
+  gap: '20px',
+  marginBottom: '30px',
+  transition: 'transform 0.3s ease',
+},
+
+contactIcon: {
+  fontSize: '32px',
+  lineHeight: '1',
+},
+
+contactLabel: {
+  fontSize: '14px',
+  opacity: '0.8',
+  marginBottom: '6px',
+},
+
+contactValue: {
+  fontSize: '18px',
+  fontWeight: '500',
+  color: 'white',
+  textDecoration: 'none',
+},
+
+/* Right side social */
+socialLinks: {
+  flex: '1',
+  minWidth: '260px',
+  marginTop: '10px',
+},
+
+socialTitle: {
+  fontSize: '24px',
+  fontWeight: '600',
+  marginBottom: '30px',
+},
+
+socialIcons: {
+  display: 'flex',
+  gap: '20px',
+  flexWrap: 'wrap',
+},
+
+socialIcon: {
+  display: 'inline-block',
+  transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+  cursor: 'pointer',
+},
   footer: {
     padding: '30px',
     background: '#1a1a2e',
